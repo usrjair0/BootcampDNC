@@ -12,7 +12,7 @@
     font-family: 'Inter', sans-serif;
 }
 body {
-    background: linear-gradient(180deg, rgba(34, 112, 214, 0.5) 60%, rgba(12, 112, 242, 0) 24.84%), #303030; 
+    background: linear-gradient(180deg, rgba(34, 112, 214, 0.5), rgba(12, 112, 242, 0) ), #303030; 
     /*o primeiro valor define a direção do gradiente que  no caso é para baixo, o segundo valor
     define a cor que ele começa e a porcentagem define a área que essa cor ocupa,
     o terceiro valor define a cor que termina e a porcentagem a área que essa cor ocupa
@@ -56,7 +56,9 @@ body {
 #menu a {
     margin-left: 35px;
 }
-
+#menu {
+    display: flex;
+}
 /*Seção principal do site*/
 section {
     display: flex;
@@ -135,4 +137,74 @@ input[type="submit"] {
     margin-top: 80px;
     padding: 10px auto;
     cursor: pointer;
+}
+footer {
+    width: 100%;
+    background-color: var(--azul-dnc);
+    padding-top: 50px;
+}
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 330px;
+}
+
+footer .linha1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer ul {
+    list-style: none;
+}
+footer h5 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--preto-dnc);
+    border-radius: 10px;
+    padding: 10px;
+}
+footer ul li {
+    text-align: center;
+    margin: 20px 0px;
+}
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+footer ul li a:hover {
+    color: var(--cinza-hover);
+}
+#endereco {
+    color: white;
+    width: 10%;
+}
+footer .linha2 {
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center;
+    text-decoration: none;
+}
+footer .linha2 a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+footer .linha2 a:first-child {
+    border-right: 3px solid white;
+}
+footer .linha2 a:hover {
+    color: var(--cinza-hover);
+}
+@media screen and (max-width: 600px) {
+    #principal {
+        flex-direction: column;
+    }
+    #menu {
+        flex-direction: column;
+    }
 }
